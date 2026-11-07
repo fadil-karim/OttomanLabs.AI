@@ -22,7 +22,7 @@ cv.append(HEAD(None, [
     ('fadilkarim@live.co.uk', 'mailto:fadilkarim@live.co.uk'),
     ('London', None),
     ('uk.linkedin.com/in/fadil-karim', 'https://uk.linkedin.com/in/fadil-karim'),
-    ('github.com/OttomanLabsAI', 'https://github.com/OttomanLabsAI'),
+    ('github.com/fadil-karim', 'https://github.com/fadil-karim'),
     ('youtube.com/@OttomanLabsAI', 'https://www.youtube.com/@OttomanLabsAI'),
     ('basilicalabs.ai', '/'),
     ('visualneuroscience.ai', 'https://visualneuroscience.ai/'),
@@ -31,7 +31,7 @@ cv.append(P("AI engineer with over a decade embedded inside enterprise engineeri
 
 work = [
 ENTRY('AI Engineer', 'Contract', 'Glent Group', 'London', '03/2026 – Present', [
- "Built and shipped pyMEP (open-sourced at github.com/OttomanLabsAI/pyMEP), a production pyRevit extension automating civil and MEP infrastructure modelling — drainage networks, conduits, fencing, chambers, topography and annotation — for a multi-office engineering team on a live hyperscale data centre programme: 44 ribbon commands across 14 panels, ~40,000 lines of code, Revit 2022–2026, distributed to engineers in other cities through an in-app self-updater; 285 commits and 220+ tagged releases in 4.5 months, every push to main auto-tagged as a release.",
+ "Built and shipped pyMEP (open-sourced at github.com/fadil-karim/pyMEP), a production pyRevit extension automating civil and MEP infrastructure modelling — drainage networks, conduits, fencing, chambers, topography and annotation — for a multi-office engineering team on a live hyperscale data centre programme: 44 ribbon commands across 14 panels, ~40,000 lines of code, Revit 2022–2026, distributed to engineers in other cities through an in-app self-updater; 285 commits and 220+ tagged releases in 4.5 months, every push to main auto-tagged as a release.",
  "Sole designer, developer and release manager, embedded with the engineers who use it — the de facto forward-deployed engineer. I designed the delivery loop itself as one system: requirements arrived from working engineers as screenshots, IFC / LandXML files and one-line messages; Claude Code implemented them under a repo-level agent contract (CLAUDE.md plus reusable release and identity skills) so it behaved consistently across sessions; automated tests, CI tagging and the self-updater carried each change to site, most the same day; I supplied domain intent, field artefacts and acceptance judgement, triaged what the agent got wrong through diagnostics I had it build, and decided the trade-offs.",
  "Engineered the domain logic underneath: a Civil 3D → Revit pipeline that parses LandXML networks into auto-placed pipes and manholes, with survey-grid rotation measured empirically by probe point rather than trusted from the API; terrain-draped fencing with a spacing solver that never exceeds the design spacing, clears foundation clashes and auto-numbers marks from network topology (cycle detection / longest path); floor draping with a barycentric fallback when Revit’s ray-caster returns nothing; union-find detection of parallel pipe, conduit and duct banks for one-click annotation; and pipes → conduits conversion that extends conduit size standards programmatically.",
  "Architected it so the entire codebase could be developed and verified without Revit on the development machine: a pure-core / Revit-shell split with 431 automated tests run under CPython 3 against code that executes in IronPython 2.7, Revit-bound modules tested by AST-extracting functions into fakes, version shims absorbing API drift across Revit 2022–2026, runtime self-calibration where API semantics differ between builds, and guards for IronPython traps such as float(None) raising a CLR SystemError.",
@@ -166,7 +166,7 @@ pf = []
 pf.append(HEAD('Portfolio — Design Systems Analyst, Specialist Modelling Group', [
     ('fadilkarim@live.co.uk', 'mailto:fadilkarim@live.co.uk'),
     ('basilicalabs.ai', '/'),
-    ('github.com/OttomanLabsAI', 'https://github.com/OttomanLabsAI'),
+    ('github.com/fadil-karim', 'https://github.com/fadil-karim'),
     ('uk.linkedin.com/in/fadil-karim', 'https://uk.linkedin.com/in/fadil-karim'),
 ]))
 
@@ -215,10 +215,10 @@ pf.append(SEC('Site and infrastructure geometry',
 
 pf.append(SEC('Tools in daily use',
  P("A tool only counts if people keep using it. **pyMEP** has been in daily use on a live hyperscale data-centre programme since March 2026, **VisualNeuroscience.AI** is live on the App Store, and the methods behind all of it are published as tutorials and a hands-on playground.", 'd-lead'),
- H3('pyMEP — Revit automation for civil and MEP', 'github.com/OttomanLabsAI/pyMEP', 'https://github.com/OttomanLabsAI/pyMEP'),
+ H3('pyMEP — Revit automation for civil and MEP', 'github.com/fadil-karim/pyMEP', 'https://github.com/fadil-karim/pyMEP'),
  FIGS(FIG('pymep-ribbon', 'The pyMEP ribbon — 14 panels, from Civil 3D conversion and fencing to chambers, annotation and COBie.',
           'The pyMEP ribbon, 14 panels: Setup, Civil 3D conversion, Modelling, Networks, Fencing, Topography, Chambers, Parameters, Annotate, Data transfer, Pipe networks, Electrical, Manhole plan, COBie',
-          'https://github.com/OttomanLabsAI/pyMEP')),
+          'https://github.com/fadil-karim/pyMEP')),
  NOTES(["**Embedded with the engineers who use it.** 44 commands for Revit 2022–2026 covering drainage, conduits, fencing, chambers, topography and annotation, used across several offices and updated from a button on the ribbon.",
         "**Civil 3D to Revit in minutes.** Reads the LandXML, reconciles survey-grid and Revit coordinates — a site datum counted twice, a rotation the API reported wrongly and measured with a probe point instead — then places every pipe and manhole as native elements, where the team used to trace hundreds by hand.",
         "**Fencing and terrain.** Fence runs drape to the topography, with panel spacing solved along each run and marks numbered automatically; floors and structures align to the Toposolid.",

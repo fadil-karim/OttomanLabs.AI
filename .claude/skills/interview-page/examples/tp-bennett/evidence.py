@@ -8,7 +8,7 @@ strongest proof; where the CV has nothing, say so plainly and give the nearest r
 for Google Cloud to point at the Jaded Rose Telegram bot.
 """
 
-PYMEP = '[[pyMEP|https://github.com/OttomanLabsAI/pyMEP]]'
+PYMEP = '[[pyMEP|https://github.com/fadil-karim/pyMEP]]'
 DCF = '[[DataCentreForge|https://dcforge.basilicalabs.ai/]]'
 VNS = '[[VisualNeuroscience.AI|https://visualneuroscience.ai/]]'
 GHS = '[[Gherkin studio|gherkin-studio.html]]'

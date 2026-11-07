@@ -5,7 +5,7 @@ const { chromium } = require('playwright');
 const pages = process.argv.slice(2);
 const ROOT = require('path').resolve(__dirname, '../../../..');
 (async () => {
-  const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' });
+  const b = await chromium.launch();  // Playwright finds the pre-installed Chromium (PLAYWRIGHT_BROWSERS_PATH)
   for (const pg of pages) {
     const p = await b.newPage({ viewport:{width:1200,height:630}, deviceScaleFactor:2 });
     await p.route('**', r => { const u = r.request().url();

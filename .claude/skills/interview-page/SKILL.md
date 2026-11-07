@@ -54,6 +54,8 @@ finds them even if hashes change.
 - **Leave out the phone number and postcode** (the page is public); email and links stay.
 - For Google Cloud, cite the **Jaded Rose Telegram bot** (GCP-native: Cloud Run, Cloud SQL, Pub/Sub).
 - Flag mismatches instead of silently fixing them (e.g. the portfolio subtitle named a different role).
+- **GitHub is github.com/fadil-karim** (the account was renamed from OttomanLabsAI in Nov 2026;
+  repos such as pyMEP and pyBuffet moved with it). Use it even where a PDF still shows OttomanLabsAI.
 
 ## Build steps
 

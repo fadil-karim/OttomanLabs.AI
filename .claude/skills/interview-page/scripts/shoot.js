@@ -9,7 +9,7 @@ const [page, OUT] = process.argv.slice(2);
 if (!page || !OUT) { console.log('usage: node shoot.js /abs/page.html OUTDIR'); process.exit(1); }
 require('fs').mkdirSync(OUT, { recursive: true });
 (async () => {
-  const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' });
+  const b = await chromium.launch();  // Playwright finds the pre-installed Chromium (PLAYWRIGHT_BROWSERS_PATH)
   for (const [name, w, theme] of [['desk', 1440, 'light'], ['dark', 1440, 'dark'], ['tab', 820, 'light'], ['mob', 390, 'light']]) {
     const ctx = await b.newContext({ viewport: { width: w, height: 900 } });
     if (theme === 'dark') await ctx.addInitScript(() => { try { localStorage.setItem('ol-theme', 'dark'); } catch (e) {} });
